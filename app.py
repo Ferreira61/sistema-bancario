@@ -19,7 +19,7 @@ Para a primeira versão precisamos implementar 3 operações: depósito, saque e
   "Não foram realizadas movimentações"
 """
 
-# Menu principal
+
 menu = """
 [d] - Depositar
 [s] - Sacar
@@ -27,14 +27,14 @@ menu = """
 [q] - Sair
 » """
 
-# Variáveis principais
+
 saldo = 0
 limite = 500
 extrato = []
 numero_saques = 0
 LIMITE_SAQUE = 3
 
-# Loop principal do sistema
+
 while True:
     opcao = input(menu)
 
@@ -49,7 +49,7 @@ while True:
         else:
             print("Valor inválido! O depósito precisa ser maior que R$ 0,00.")
 
-    # Saque
+    
     elif opcao == "s":
         saque = float(input("Insira o valor que deseja sacar: "))
 
@@ -83,11 +83,11 @@ while True:
         print(f"\nSaldo atual: R$ {saldo:.2f}")
         print("=============================\n")
 
-    # Sair
+    
     elif opcao == "q":
         print("Obrigado por utilizar nosso sistema bancário! Saindo...")
         break
 
-    # Opção inválida
+    
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
